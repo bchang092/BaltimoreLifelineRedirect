@@ -1,0 +1,38 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About LumaReach — Community first.</title>
+  <meta name="description" content="LumaReach runs Baltimore Lifeline. Our mission is to provide verified community resources, sustained through paid data collection, verification, and update services.">
+  <link rel="icon" type="image/png" href="{% static 'lumareach-logo.png' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'luma.css' %}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include "partials/header.html" %}
+  <main id="main" class="wrap about-page">
+    <section class="about-hero" aria-labelledby="about-heading">
+      <div><p class="eyebrow">ABOUT LUMAREACH</p><h1 id="about-heading">Community first.<br><span>Technology with purpose.</span></h1><p class="about-lead">Our mission is to put verified community resources within reach.</p></div>
+      <span class="hero-emblem"><img src="{% static 'lumareach-logo.png' %}" width="172" height="163" alt="LumaReach symbol: a person reaching toward a golden star"></span>
+    </section>
+    <section class="section-row" aria-labelledby="community-heading">
+      <p class="section-label"><span>01</span> — Our community</p>
+      <div class="section-content"><h2 id="community-heading">It starts with Baltimore.</h2><p>We run <strong>Baltimore Lifeline</strong>, a community resource site that helps people find local support. It’s the first chapter of LumaReach—and the reason we started.</p><p>Our focus is information people can use: checked against sources, clearly organized, and revisited as things change.</p>
+        {% include "partials/baltimore_card.html" %}
+        <a class="text-link founders-link" href="{{ baltimore_url }}about/">Meet the founders <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section class="section-row" aria-labelledby="sustain-heading">
+      <p class="section-label"><span>02</span> — A sustainable mission</p>
+      <div class="section-content"><h2 id="sustain-heading">The same technology.<br>A wider purpose.</h2><p>We aim to sustain our community work by offering the technology behind it as a paid service to businesses and organizations.</p><p>From web scraping and AI-assisted verification to custom data pipelines, we help turn scattered information into useful datasets that stay up to date.</p><ul class="service-tags" aria-label="Data services"><li>Collect information</li><li>Check and organize</li><li>Keep it current</li></ul><p class="mission-note">Useful data for your work. Lasting support for ours.</p></div>
+    </section>
+    <section class="about-cta" aria-labelledby="project-heading"><div><p class="eyebrow">WORK WITH LUMAREACH</p><h2 id="project-heading">What information would<br>move your work forward?</h2></div><a class="button" href="{% url 'luma_home' %}#contact">Tell us about your project <span aria-hidden="true">↗</span></a></section>
+  </main>
+  {% include "partials/footer.html" %}
+</body>
+</html>

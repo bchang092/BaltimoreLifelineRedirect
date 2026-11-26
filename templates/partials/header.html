@@ -1,0 +1,7 @@
+{% load static %}
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="wordmark" href="{% url 'luma_home' %}"><span class="logo-tile"><img src="{% static 'lumareach-logo.png' %}" width="32" height="32" alt=""></span>LumaReach</a>
+      <nav aria-label="Primary"><a href="{% url 'luma_home' %}#services">Services</a><a href="{% url 'luma_home' %}#resources">Resources</a><a class="about-link" href="{% url 'luma_about' %}"{% if page == "about" %} aria-current="page"{% endif %}>About</a><a class="contact-link" href="{% url 'luma_home' %}#contact">Contact <span aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
